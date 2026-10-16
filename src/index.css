@@ -84,16 +84,6 @@ img {
 }
 
 
-
-/* =========================================================
-   NAVBAR
-========================================================= */
-
-
-
-/// ------------------- this is the Hero.
-/* HERO */
-
 /* =========================================================
    HERO
 ========================================================= */
@@ -1295,8 +1285,7 @@ img {
   display: inline-block;
 }
 
-
-//////////////////////////////////// Here the Project section is
+// Here the Project section is
 /* 
 .projects-section {
   position: relative;
@@ -1500,7 +1489,7 @@ img {
 } */
 
 
-/// here old css will be working on it.
+// here old css will be working on it.
 
 // this is Services css
 .services-section {
@@ -1878,7 +1867,7 @@ img {
 }
 
 
-//// section --- Hero section code
+// section --- Hero section code
 
 /* =========================================
    HERO
@@ -2640,7 +2629,7 @@ img {
 }
 
 
-/// for mobile
+// for mobile
 @media (max-width: 768px) {
   .work-header {
     padding:
