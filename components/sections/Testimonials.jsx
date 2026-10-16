@@ -11,7 +11,7 @@ const testimonials = [
             "Working with the team made the entire process much easier. We finally had a website that clearly communicates what we actually do.",
         name: "Sanjay",
         company: "RB knit exports",
-        image: "/testimonials/client-1.jpg",
+        image: "/testimonials/client_image.png",
     },
 
     {
@@ -20,7 +20,7 @@ const testimonials = [
             "The new website gave our brand a completely different presence online. It feels much more professional and is far easier for customers to navigate.",
         name: "Clark kegley",
         company: "clarksaas",
-        image: "/testimonials/client-2.jpg",
+        image: "/testimonials/client_image_2.png",
     },
 
     {
@@ -29,7 +29,7 @@ const testimonials = [
             "From the initial idea to the final product, everything was focused on making the experience better for our customers.",
         name: "Mohit agerwal",
         company: "RapidX Softwares",
-        image: "/testimonials/client-3.jpg",
+        image: "/testimonials/client_image_3.png",
     },
 
     {
@@ -38,7 +38,7 @@ const testimonials = [
             "We needed something simple, modern and built around the business. The final result gave us exactly that.",
         name: "Samrat Shah",
         company: "Samrat Mills",
-        image: "/testimonials/client-4.jpg",
+        image: "/testimonials/samratmills_logo.jpg",
     },
 ];
 

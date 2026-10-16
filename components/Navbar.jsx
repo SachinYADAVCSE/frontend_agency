@@ -31,7 +31,7 @@ export default function Navbar() {
   const menuItems = [
     {
       label: "WORK",
-      href: "/work",
+      href: "/projects",
     },
     {
       label: "BLOG",
