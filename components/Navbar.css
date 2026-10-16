@@ -1,0 +1,1313 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.site-navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 92px;
+
+    padding:
+        0
+        34px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    color: #ffffff;
+
+    pointer-events: none;
+
+    transition:
+        color 0.4s ease;
+
+}
+
+
+/*
+=========================================================
+ALL NAVBAR CHILDREN
+=========================================================
+*/
+
+.site-navbar > * {
+    pointer-events: auto;
+}
+
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-logo {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    width: 145px;
+
+    min-height: 39px;
+
+    padding:
+        3px
+        4px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
+    line-height: 0.82;
+
+    font-weight: 900;
+
+    letter-spacing: -0.065em;
+
+    transition:
+        opacity 0.3s ease;
+
+}
+
+
+.site-logo:hover {
+    opacity: 0.8;
+}
+
+
+.site-logo span {
+    display: block;
+}
+
+
+.site-logo sup {
+
+    font-size: 5px;
+
+    vertical-align: top;
+
+    margin-left: 1px;
+
+    letter-spacing: 0;
+}
+
+
+
+/* =========================================================
+   CENTER MENU BUTTON
+========================================================= */
+
+.menu-button {
+
+    position: absolute;
+
+    top: 28px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    height: 57px;
+
+    padding:
+        0
+        17px
+        0
+        25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #252525;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    transition:
+        opacity 0.35s ease,
+
+        transform 0.5s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+
+}
+
+
+.menu-button:hover {
+    background: #1d1d1d;
+}
+
+
+.menu-button-label {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+
+}
+
+
+.menu-divider {
+
+    color: #777777;
+
+    font-size: 13px;
+
+}
+
+
+.menu-availability {
+
+    color: #858585;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    white-space: nowrap;
+
+}
+
+
+.menu-button-icon {
+
+    width: 17px;
+
+    height: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-left: 2px;
+
+}
+
+
+.menu-button-icon > span {
+
+    width: 13px;
+
+    height: 1px;
+
+    display: block;
+
+    background: #ffffff;
+
+}
+
+
+
+/* =========================================================
+   MENU OPEN — HIDE CENTER PILL
+========================================================= */
+
+.navbar-menu-open .menu-button {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translateX(-50%)
+        translateY(-10px);
+
+}
+
+
+
+/* =========================================================
+   CHAT BUTTON
+========================================================= */
+
+.chat-button {
+
+    position: absolute;
+
+    top: 37px;
+
+    right: 27px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        0
+        0
+        0
+        13px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+
+    transform:
+        translate3d(
+            0,
+            0,
+            0
+        );
+
+}
+
+
+.chat-button > span:first-child {
+
+    padding-right: 14px;
+
+}
+
+
+.chat-arrow {
+
+    width: 39px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #111111;
+
+    color: #ffffff;
+
+}
+
+
+
+/* =========================================================
+   LIGHT NAVBAR
+========================================================= */
+
+.navbar-light {
+
+    color: #111111;
+
+}
+
+
+.navbar-light .menu-button {
+
+    background: #252525;
+
+    color: #ffffff;
+
+}
+
+
+.navbar-light .chat-button {
+
+    background: #ffffff;
+
+    color: #111111;
+
+}
+
+
+
+/* =========================================================
+   FULLSCREEN MENU
+========================================================= */
+
+.fullscreen-menu {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 900;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    overflow: hidden;
+
+    pointer-events: auto;
+}
+
+
+
+/* =========================================================
+   DARK HERO OVERLAY
+========================================================= */
+
+.menu-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.43
+        );
+
+    backdrop-filter:
+        blur(1.5px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================================================
+   MENU CARD
+========================================================= */
+
+.menu-card {
+    position: relative;
+
+    z-index: 2;
+
+    width: 450px;
+
+    height: 472px;
+
+    margin-top: 28px;
+
+    padding:
+        31px
+        32px
+        29px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    border-radius: 19px;
+
+    box-shadow:
+        0
+        25px
+        80px
+        rgba(
+            0,
+            0,
+            0,
+            0.22
+        );
+
+    opacity: 0;
+
+    transform:
+        translateY(-35px)
+        scale(0.97);
+}
+
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.menu-card-top {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.menu-card-title {
+
+    color: #102cff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+}
+
+
+.menu-close {
+
+    width: 26px;
+
+    height: 26px;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #102cff;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+
+}
+
+
+.menu-close:hover {
+
+    transform:
+        rotate(90deg)
+        scale(1.08);
+
+}
+
+
+
+/* =========================================================
+   MENU LINKS
+========================================================= */
+
+.menu-card-links {
+
+    margin-top: 31px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+.menu-card-links a {
+
+    display: block;
+
+    width: fit-content;
+
+    height: 42px;
+
+    overflow: visible;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 31px;
+
+    line-height: 42px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.045em;
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    filter: blur(0);
+
+    perspective: 600px;
+
+    cursor: pointer;
+
+}
+
+
+.menu-card-links a:hover {
+
+    color: #102cff;
+
+    transform:
+        translateX(5px);
+
+}
+
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.menu-card-bottom {
+
+    margin-top: auto;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    opacity: 0;
+
+    transform:
+        translateY(15px);
+
+}
+
+
+.menu-time {
+
+    color: #102cff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+
+}
+
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.menu-socials {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+}
+
+
+.menu-socials a {
+
+    width: 31px;
+
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eeeeee;
+
+    color: #102cff;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+
+        transform 0.3s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+
+}
+
+
+.menu-socials a:hover {
+
+    background: #e1e1e1;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-navbar {
+
+        height: 82px;
+
+        padding:
+            0
+            22px;
+
+    }
+
+
+    .menu-button {
+
+        top: 22px;
+
+        height: 53px;
+
+    }
+
+
+    .chat-button {
+
+        top: 28px;
+
+        right: 20px;
+
+    }
+
+
+    .menu-availability {
+
+        display: none;
+
+    }
+
+
+    .menu-divider {
+
+        display: none;
+
+    }
+
+
+    .menu-card {
+
+        width: 430px;
+
+        max-width:
+            calc(
+                100vw - 40px
+            );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-navbar {
+
+        height: 75px;
+
+        padding:
+            0
+            16px;
+
+    }
+
+
+    .menu-card {
+        position: relative;
+    
+        z-index: 2;
+    
+        width: 450px;
+    
+        height: 472px;
+    
+        margin-top: 28px;
+    
+        padding:
+            31px
+            32px
+            29px;
+    
+        box-sizing: border-box;
+    
+        display: flex;
+    
+        flex-direction: column;
+    
+        background: #ffffff;
+    
+        color: #111111;
+    
+        border-radius: 19px;
+    
+        box-shadow:
+            0
+            25px
+            80px
+            rgba(
+                0,
+                0,
+                0,
+                0.22
+            );
+    
+        opacity: 0;
+    
+        transform:
+            translateY(-35px)
+            scale(0.97);
+    }
+
+
+    .menu-button {
+
+        top: 18px;
+
+        height: 45px;
+
+        padding:
+            0
+            13px
+            0
+            17px;
+
+        gap: 8px;
+
+        border-radius: 7px;
+
+    }
+
+
+    .menu-button-label {
+
+        font-size: 11px;
+
+    }
+
+
+    .menu-button-icon {
+
+        width: 15px;
+
+        height: 15px;
+
+    }
+
+
+    .chat-button {
+
+        top: 20px;
+
+        right: 15px;
+
+        height: 35px;
+
+        padding-left: 10px;
+
+        font-size: 8px;
+
+    }
+
+
+    .chat-button > span:first-child {
+
+        padding-right: 9px;
+
+    }
+
+
+    .chat-arrow {
+
+        width: 34px;
+
+        height: 35px;
+
+    }
+
+
+    .menu-card {
+
+        width:
+            calc(
+                100vw - 30px
+            );
+
+        height: 470px;
+
+        padding:
+            27px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .menu-card-title {
+
+        font-size: 13px;
+
+    }
+
+
+    /* =========================================================
+   MENU LINKS
+========================================================= */
+
+.menu-card-links {
+
+    margin-top: 31px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.menu-card-links a {
+
+    display: block;
+
+    height: 42px;
+
+    width: fit-content;
+
+    overflow: visible;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 31px;
+
+    line-height: 42px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.045em;
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    filter: blur(8px);
+
+    perspective: 500px;
+
+}
+
+
+    .menu-time {
+
+        font-size: 14px;
+
+    }
+
+
+    .menu-socials a {
+
+        width: 29px;
+
+        height: 29px;
+
+    }
+
+}
+
+
+/* =========================================================
+   NORMAL TEXT
+========================================================= */
+
+.menu-link-text {
+
+    display: block;
+
+    color: #111111;
+
+    transform-origin: center center;
+
+    transform-style: preserve-3d;
+
+    backface-visibility: hidden;
+
+    transition:
+        transform 0.6s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        ),
+
+        color 0.35s ease;
+
+}
+
+
+/* =========================================================
+   HOVER TEXT
+========================================================= */
+
+.menu-link-hover-text {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    display: block;
+
+    color: #102cff;
+
+    transform:
+        translateY(100%);
+
+    transition:
+        transform 0.45s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.menu-card-links a:hover
+.menu-link-text {
+
+    color: #102cff;
+
+    transform:
+        rotateX(360deg)
+        translateX(4px);
+
+}
+
+
+.menu-card-links a:hover
+.menu-link-hover-text {
+
+    transform:
+        translateY(0);
+
+}
+
+
+.menu-card-links a {
+    transition:
+        transform 0.45s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+
+.menu-card-links a:hover {
+    color: #102cff;
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .site-navbar {
+
+        padding:
+            0
+            13px;
+
+    }
+
+
+    .site-logo {
+
+        width: 95px;
+
+        min-height: 29px;
+
+        font-size: 11px;
+
+    }
+
+
+    .menu-button {
+
+        left: 50%;
+
+        padding:
+            0
+            11px
+            0
+            14px;
+
+    }
+
+
+    .menu-availability {
+
+        display: none;
+
+    }
+
+
+    .chat-button {
+
+        right: 12px;
+
+        height: 33px;
+
+        padding-left: 8px;
+
+        font-size: 7px;
+
+    }
+
+
+    .chat-arrow {
+
+        width: 31px;
+
+        height: 33px;
+
+    }
+
+
+    .menu-card {
+
+        width:
+            calc(
+                100vw - 24px
+            );
+
+        height: 450px;
+
+        padding:
+            24px;
+
+    }
+
+
+    .menu-card-links a {
+
+        font-size: 26px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    .menu-button,
+    .chat-button,
+    .menu-card-links a,
+    .menu-close,
+    .menu-socials a {
+
+        transition: none;
+
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .menu-card {
+        width:
+            calc(
+                100vw - 30px
+            );
+
+        height: 470px;
+
+        margin-top: 18px;
+
+        padding:
+            27px;
+
+        border-radius: 17px;
+    }
+
+
+    .menu-card-links a {
+
+        height: 38px;
+
+        font-size: 28px;
+
+        line-height: 38px;
+
+    }
+
+
+    .site-logo {
+
+        background: transparent !important;
+    
+        background-color: transparent !important;
+    
+        color: #ffffff !important;
+    
+        box-shadow: none !important;
+    
+        border: none !important;
+    
+        padding: 3px 4px !important;
+    
+    }
+
+}

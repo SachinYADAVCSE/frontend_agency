@@ -1,0 +1,994 @@
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 680px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    color: #fff;
+
+    isolation: isolate;
+
+    transform-origin: center bottom;
+
+    will-change:
+        transform,
+        border-radius;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 0;
+
+    background: #111;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+    position: absolute;
+
+    top: -6%;
+    left: -6%;
+
+    width: 112%;
+    height: 112%;
+
+    max-width: none;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    will-change:
+        transform,
+        opacity;
+
+    transform:
+        translate3d(0, 0, 0)
+        scale(1);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.hero-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        rgba(0, 0, 0, 0.18);
+
+    opacity: 0.25;
+
+    pointer-events: none;
+
+    will-change: opacity;
+}
+
+
+/* =========================================================
+   GRADIENT
+========================================================= */
+
+.hero-gradient {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.27) 0%,
+            rgba(0, 0, 0, 0.02) 28%,
+            rgba(0, 0, 0, 0.03) 55%,
+            rgba(0, 0, 0, 0.5) 100%
+        );
+}
+
+
+/* =========================================================
+   NOISE
+========================================================= */
+
+.hero-noise {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    opacity: 0.035;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+
+    mix-blend-mode: overlay;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+
+    padding:
+        0
+        8vw;
+
+    box-sizing: border-box;
+
+    transform:
+        translateY(-43%);
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero-title {
+    width: max-content;
+
+    max-width: 90vw;
+
+    margin: 0;
+
+    font-size:
+        clamp(
+            70px,
+            10.2vw,
+            185px
+        );
+
+    line-height: 0.79;
+
+    letter-spacing: -0.075em;
+
+    font-weight: 700;
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* =========================================================
+   TITLE LINE MASK
+========================================================= */
+
+.hero-line-wrap {
+    position: relative;
+
+    height: 0.9em;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TITLE LINE
+========================================================= */
+
+.hero-line {
+    display: block;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* =========================================================
+   THIRD LINE OFFSET
+========================================================= */
+
+.hero-line-last {
+    margin-left: 8vw;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.hero-subtitle {
+    margin-top: 45px;
+
+    margin-left: 8vw;
+
+    font-size: 13px;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.01em;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.88
+        );
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* =========================================================
+   HERO META
+========================================================= */
+
+.hero-meta {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 27px;
+
+    padding:
+        0
+        34px;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items: end;
+
+    z-index: 30;
+
+    font-size: 8px;
+
+    line-height: 1;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.85
+        );
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* =========================================================
+   META LEFT
+========================================================= */
+
+.hero-meta-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.hero-meta-number {
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   META CENTER
+========================================================= */
+
+.hero-meta-center {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   META RIGHT
+========================================================= */
+
+.hero-meta-right {
+    justify-self: end;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+/* =========================================================
+   SCROLL DOT
+========================================================= */
+
+.hero-scroll-dot {
+    width: 5px;
+
+    height: 5px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    animation:
+        heroScrollPulse
+        2s
+        ease-in-out
+        infinite;
+}
+
+@keyframes heroScrollPulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform: scale(1.4);
+    }
+}
+
+
+/* =========================================================
+   SCROLL ARROW
+========================================================= */
+
+.hero-scroll-arrow {
+    font-size: 14px;
+
+    margin-left: 3px;
+}
+
+
+/* =========================================================
+   FEATURED PROJECT CARD
+========================================================= */
+
+.hero-project-card {
+    position: absolute;
+
+    right: 34px;
+
+    bottom: 72px;
+
+    width: 245px;
+
+    z-index: 25;
+
+    display: block;
+
+    color: #111;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.97
+        );
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    cursor: pointer;
+
+    will-change:
+        transform,
+        opacity,
+        filter;
+
+    transform:
+        translate3d(
+            0,
+            0,
+            0
+        );
+
+    transition:
+        box-shadow
+        0.5s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.hero-project-card:hover {
+    box-shadow:
+        0 35px 90px
+        rgba(
+            0,
+            0,
+            0,
+            0.32
+        );
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.hero-project-card-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    height: 145px;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.hero-project-card-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    will-change:
+        transform;
+}
+
+
+/* =========================================================
+   CARD IMAGE OVERLAY
+========================================================= */
+
+.hero-project-card-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.02),
+            rgba(0, 0, 0, 0.38)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.hero-project-card-index {
+    position: absolute;
+
+    top: 13px;
+    left: 14px;
+
+    color: #fff;
+
+    font-size: 8px;
+
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   CARD ARROW
+========================================================= */
+
+.hero-project-card-arrow {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #111;
+
+    background: #fff;
+
+    transition:
+        transform
+        0.45s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+
+/* =========================================================
+   CARD ARROW HOVER
+========================================================= */
+
+.hero-project-card:hover
+.hero-project-card-arrow {
+    transform:
+        translate(
+            4px,
+            -4px
+        );
+}
+
+
+/* =========================================================
+   CARD INFORMATION
+========================================================= */
+
+.hero-project-card-info {
+    min-height: 72px;
+
+    padding:
+        15px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   CARD MAIN
+========================================================= */
+
+.hero-project-card-main {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.hero-project-card-title {
+    display: block;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   CARD TYPE
+========================================================= */
+
+.hero-project-card-type {
+    display: block;
+
+    font-size: 7px;
+
+    line-height: 1;
+
+    letter-spacing: 0.13em;
+
+    color: #777;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CARD VIEW
+========================================================= */
+
+.hero-project-card-view {
+    flex-shrink: 0;
+
+    font-size: 6px;
+
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+
+    color: #777;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero-project-card {
+        right: 25px;
+
+        width: 220px;
+    }
+
+    .hero-project-card-image-wrap {
+        height: 130px;
+    }
+
+    .hero-meta-center {
+        gap: 18px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: 650px;
+    }
+
+
+    /* content */
+
+    .hero-content {
+        padding:
+            0
+            7vw;
+
+        transform:
+            translateY(-48%);
+    }
+
+
+    /* title */
+
+    .hero-title {
+        font-size:
+            clamp(
+                64px,
+                14vw,
+                120px
+            );
+
+        line-height: 0.82;
+    }
+
+
+    .hero-line-last {
+        margin-left: 5vw;
+    }
+
+
+    /* subtitle */
+
+    .hero-subtitle {
+        margin-left: 5vw;
+
+        margin-top: 30px;
+
+        font-size: 12px;
+    }
+
+
+    /* project card */
+
+    .hero-project-card {
+        right: 18px;
+
+        bottom: 62px;
+
+        width:
+            min(
+                78vw,
+                320px
+            );
+    }
+
+    .hero-project-card-image-wrap {
+        height: 115px;
+    }
+
+
+    /* meta */
+
+    .hero-meta {
+        padding:
+            0
+            22px;
+    }
+
+    .hero-meta-center {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 620px;
+    }
+
+
+    .hero-content {
+        padding:
+            0
+            6vw;
+
+        transform:
+            translateY(-50%);
+    }
+
+
+    .hero-title {
+        font-size:
+            clamp(
+                52px,
+                15vw,
+                90px
+            );
+
+        line-height: 0.84;
+
+        letter-spacing:
+            -0.07em;
+    }
+
+
+    .hero-line-last {
+        margin-left: 3vw;
+    }
+
+
+    .hero-subtitle {
+        margin-left: 3vw;
+
+        margin-top: 25px;
+
+        font-size: 11px;
+    }
+
+
+    /* card */
+
+    .hero-project-card {
+        right: 14px;
+
+        bottom: 58px;
+
+        width: 185px;
+    }
+
+    .hero-project-card-image-wrap {
+        height: 105px;
+    }
+
+    .hero-project-card-info {
+        min-height: 58px;
+
+        padding:
+            11px;
+    }
+
+    .hero-project-card-title {
+        font-size: 8px;
+    }
+
+    .hero-project-card-type {
+        font-size: 6px;
+    }
+
+    .hero-project-card-view {
+        display: none;
+    }
+
+    .hero-project-card-arrow {
+        width: 24px;
+        height: 24px;
+    }
+
+
+    /* metadata */
+
+    .hero-meta {
+        bottom: 18px;
+
+        padding:
+            0
+            18px;
+
+        font-size: 7px;
+    }
+
+    .hero-meta-right
+    span:nth-child(2) {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .hero-project-card {
+        right: 12px;
+
+        bottom: 55px;
+
+        width: 165px;
+    }
+
+    .hero-project-card-image-wrap {
+        height: 92px;
+    }
+
+    .hero-project-card-info {
+        min-height: 54px;
+    }
+
+    .hero-project-card-title {
+        font-size: 7px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-scroll-dot {
+        animation: none;
+    }
+
+    .hero-project-card,
+    .hero-project-card-arrow {
+        transition: none;
+    }
+}

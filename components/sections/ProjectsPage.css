@@ -1,0 +1,435 @@
+/* =========================================================
+   ALL PROJECTS PAGE
+   ========================================================= */
+
+   .all-projects-page {
+    width: 100%;
+    min-height: 100vh;
+  
+    padding: 120px 0 140px;
+  
+    background: #f5f5f3;
+    color: #111;
+  
+    box-sizing: border-box;
+  }
+  
+  
+  /* =========================================================
+     HEADER
+     ========================================================= */
+  
+  .all-projects-header {
+    width: min(1180px, calc(100% - 80px));
+  
+    margin: 0 auto 70px;
+  
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+  
+    align-items: start;
+  }
+  
+  .all-projects-number {
+    font-size: 11px;
+    line-height: 1;
+  
+    padding-top: 8px;
+  }
+  
+  .all-projects-title-wrap {
+    position: relative;
+  }
+  
+  .all-projects-title-wrap h1 {
+    margin: 0;
+  
+    font-size: clamp(76px, 9vw, 120px);
+    line-height: 0.82;
+  
+    letter-spacing: -0.075em;
+    font-weight: 700;
+  
+    color: #111;
+  }
+  
+  .all-projects-year {
+    margin-top: 16px;
+  
+    font-size: 14px;
+    line-height: 1;
+  }
+  
+  .all-projects-description {
+    max-width: 190px;
+    margin-left: auto;
+  }
+  
+  .all-projects-description p {
+    margin: 0;
+  
+    font-size: 11px;
+    line-height: 1.3;
+  
+    color: #222;
+  }
+  
+  
+  /* =========================================================
+     GRID
+     ========================================================= */
+  
+  .all-projects-grid {
+    width: min(1180px, calc(100% - 80px));
+  
+    margin: 0 auto;
+  
+    display: grid;
+  
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  
+    column-gap: 10px;
+    row-gap: 70px;
+  }
+  
+  
+  /* =========================================================
+     CARD
+     ========================================================= */
+  
+  .all-project-card {
+    display: block;
+  
+    width: 100%;
+  
+    color: inherit;
+    text-decoration: none;
+  
+    position: relative;
+  
+    min-width: 0;
+  }
+  
+  
+  /* =========================================================
+     TOP
+     ========================================================= */
+  
+  .all-project-top {
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 0 2px 9px;
+  
+    font-size: 9px;
+    line-height: 1;
+  
+    color: #555;
+  }
+  
+  .all-project-index {
+    color: #111;
+  }
+  
+  .all-project-year {
+    color: #777;
+  }
+  
+  
+  /* =========================================================
+     IMAGE
+     ========================================================= */
+  
+  .all-project-image-wrap {
+    width: 100%;
+  
+    aspect-ratio: 1.45 / 1;
+  
+    overflow: hidden;
+  
+    position: relative;
+  
+    background: #ddd;
+  
+    border-radius: 8px;
+  }
+  
+  
+  /* =========================================================
+     IMAGE
+     ========================================================= */
+  
+  .all-project-image {
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+  
+    transform:
+      scale(1)
+      translate3d(0, 0, 0);
+  
+    transition:
+      transform 900ms cubic-bezier(0.16, 1, 0.3, 1),
+      filter 700ms ease;
+  
+    will-change: transform, filter;
+  }
+  
+  
+  /* =========================================================
+     HOVER
+     ========================================================= */
+  
+  .all-project-card:hover .all-project-image {
+    transform: scale(1.055);
+  
+    filter: blur(1px);
+  }
+  
+  
+  /* =========================================================
+     HOVER OVERLAY
+     ========================================================= */
+  
+  .all-project-hover {
+    position: absolute;
+  
+    left: 50%;
+    top: 50%;
+  
+    transform:
+      translate(-50%, -45%)
+      scale(0.94);
+  
+    opacity: 0;
+  
+    display: flex;
+  
+    align-items: center;
+    gap: 9px;
+  
+    padding: 10px 15px;
+  
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  
+    border-radius: 999px;
+  
+    color: #fff;
+  
+    background: rgba(0, 0, 0, 0.2);
+  
+    backdrop-filter: blur(8px);
+  
+    font-size: 11px;
+  
+    pointer-events: none;
+  
+    transition:
+      opacity 400ms ease,
+      transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .all-project-card:hover .all-project-hover {
+    opacity: 1;
+  
+    transform:
+      translate(-50%, -50%)
+      scale(1);
+  }
+  
+  .all-project-arrow {
+    font-size: 14px;
+  }
+  
+  
+  /* =========================================================
+     BOTTOM
+     ========================================================= */
+  
+  .all-project-bottom {
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: baseline;
+  
+    padding: 12px 2px 0;
+  }
+  
+  .all-project-bottom h2 {
+    margin: 0;
+  
+    font-size: 18px;
+    line-height: 1;
+  
+    font-weight: 600;
+  
+    letter-spacing: -0.035em;
+  }
+  
+  .all-project-bottom span {
+    font-size: 9px;
+  
+    color: #777;
+  }
+  
+  
+  /* =========================================================
+     CARD REVEAL
+     ========================================================= */
+  
+  .all-project-card {
+    opacity: 0;
+  
+    animation:
+      projectPageReveal 800ms
+      cubic-bezier(0.16, 1, 0.3, 1)
+      forwards;
+  }
+  
+  .all-project-card:nth-child(1) {
+    animation-delay: 80ms;
+  }
+  
+  .all-project-card:nth-child(2) {
+    animation-delay: 140ms;
+  }
+  
+  .all-project-card:nth-child(3) {
+    animation-delay: 200ms;
+  }
+  
+  .all-project-card:nth-child(4) {
+    animation-delay: 260ms;
+  }
+  
+  .all-project-card:nth-child(5) {
+    animation-delay: 320ms;
+  }
+  
+  .all-project-card:nth-child(6) {
+    animation-delay: 380ms;
+  }
+  
+  @keyframes projectPageReveal {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  /* =========================================================
+     TABLET
+     ========================================================= */
+  
+  @media (max-width: 768px) {
+  
+    .all-projects-page {
+      padding: 90px 0 100px;
+    }
+  
+    .all-projects-header {
+      width: calc(100% - 40px);
+  
+      grid-template-columns: 1fr;
+  
+      gap: 20px;
+  
+      margin-bottom: 45px;
+    }
+  
+    .all-projects-title-wrap h1 {
+      font-size: clamp(64px, 15vw, 95px);
+    }
+  
+    .all-projects-description {
+      margin-left: 0;
+    }
+  
+    .all-projects-grid {
+      width: calc(100% - 40px);
+  
+      grid-template-columns: 1fr;
+  
+      row-gap: 45px;
+    }
+  
+    .all-project-image-wrap {
+      aspect-ratio: 1.3 / 1;
+    }
+  }
+  
+  
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+  
+  @media (max-width: 480px) {
+  
+    .all-projects-page {
+      padding: 75px 0 80px;
+    }
+  
+    .all-projects-header {
+      width: calc(100% - 28px);
+  
+      margin-bottom: 35px;
+    }
+  
+    .all-projects-title-wrap h1 {
+      font-size: 64px;
+  
+      letter-spacing: -0.07em;
+    }
+  
+    .all-projects-grid {
+      width: calc(100% - 28px);
+  
+      row-gap: 38px;
+    }
+  
+    .all-project-image-wrap {
+      aspect-ratio: 1.15 / 1;
+  
+      border-radius: 7px;
+    }
+  
+    .all-project-bottom h2 {
+      font-size: 16px;
+    }
+  
+    .all-project-bottom span {
+      font-size: 8px;
+    }
+  }
+  
+  
+  /* =========================================================
+     REDUCED MOTION
+     ========================================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+  
+    .all-project-card {
+      animation: none;
+      opacity: 1;
+    }
+  
+    .all-project-image {
+      transition: none;
+    }
+  
+    .all-project-hover {
+      transition: none;
+    }
+  }
